@@ -3,3 +3,5 @@ Rasa is an open source framework for developing AI powered, industrial grade cha
 Rasa offers a Free Plan with limited features. They also offer an Enterprise Plan for their product
 But since we are too poor to afford it and lack "Swaggy-money", me fam & ma-bluds gonna use use the free plan
 Ciao! Enjoy(*drops mic)
+
+The programming language used is Python
