@@ -4,4 +4,5 @@ Rasa offers a Free Plan with limited features. They also offer an Enterprise Pla
 But since we are too poor to afford it and lack "Swaggy-money", me fam & ma-bluds gonna use use the free plan
 Ciao! Enjoy(*drops mic)
 
-The programming language used is Python
+The programming language used is Python. Yo slick make sure your Python version is above 3.9
+Download Rasa, just type in the Terminal "pip install rasa"
