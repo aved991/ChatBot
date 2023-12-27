@@ -6,3 +6,4 @@ Ciao! Enjoy(*drops mic)
 
 The programming language used is Python. Yo slick make sure your Python version is above 3.6
 Download Rasa, just type in the Terminal "pip install rasa"
+It is advised to use Pylance for this project
