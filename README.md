@@ -1,5 +1,5 @@
 There are various chatbot open source framework in the internet. This ChatBot project is made using Neural Networks.
-But since we are too poor to afford it and lack "Swaggy-money", me fam & ma-bluds gonna use use the free plan
+But since we are too poor to afford frameworks from the internet and lack "Swaggy-money", me fam & ma-bluds(my project participants) gonna use use the free plan
 Ciao! Enjoy(*drops mic)
 
 System requirements:
