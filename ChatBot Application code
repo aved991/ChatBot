@@ -1,0 +1,55 @@
+import random 
+import json 
+import pickle
+import numpy as np 
+import nltk
+
+from nltk.stem import WordNetLemmatizer
+from keras.models import load_model
+
+lemmatizer = WordNetLemmatizer(0)
+intents = json.loads(open(‘intents.json’).read()) # copy & paste the file path of json intents
+
+words = pickle.load(open(‘words.pkl’, ‘rb’))
+classes = pickle.load(open(‘classes.pkl’, ‘rb’))
+model = load_model(“chatbot_project.h5’)
+
+def clean_up_sentence(sentence):
+  sentence_words = nltk.word_tokenize(sentence)
+  sentence_words =[lemmatizer.lemmatize(word) for word in sentence_words]
+  return sentence_words
+
+def bag_of_words(sentence):
+  sentence_words = clean_up_sentence(sentence)
+  bag = [0]*len(words)
+  for w in sentence_words:
+    for i, word in enumerate(words):
+      if word==w:
+        bag[i]=1
+  return np.array(bag)
+
+def pedict_class(sentence):
+  bow = bag_of_words(sentence)
+  res = model.predict(np.array([bow]))[0]
+
+  ERROR_THESHOLD = 0.25
+  results = [[i,r] for i, r in enumerate(res) if r>ERROR_THESHOLD] 
+  results.sort(key = lambda x:x[1], reverse = True)
+  return_lis = [] for r in results:
+  return_lists.append({‘intent’:classes[r[0]], ’probability’:str(r[1])})
+  return return_lists
+
+def get_ response(intents_lists, intents_json): 
+  lists_of_intents= intents_json[‘intents’] 
+  tag = intents_list[0][‘intent’]
+  for i in list_of_intents:
+    if i[‘tag’]==tag:
+      result= random.choice(i[‘responses’]) 
+break
+    return result print(“Great! Bot is running!”)
+
+while True:
+  message= input(“”)
+  ints= predict_class(message) 
+  res= get_responses(ints, intents) 
+  print(res)
